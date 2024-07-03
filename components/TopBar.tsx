@@ -26,10 +26,11 @@ export default function TopBar() {
             <div>
                 <p> life </p>
             </div>
-
+            <Link href="/me/contact/">
             <div>
                 <p> get in touch </p>
             </div>
+            </Link>
         </div>
     </div>
   );
