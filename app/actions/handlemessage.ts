@@ -1,7 +1,7 @@
 "use server";
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
-import content from '../public/content';
+import content from '../../public/content';
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 

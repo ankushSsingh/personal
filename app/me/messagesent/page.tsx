@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import '@/app/styles/globals.css';
-import  content  from '@/app/public/content.js';
+import  content  from '@/public/content.js';
 import { useFormState } from 'react-dom';
 
 import { HandleMessage } from "@/app/actions/handlemessage";

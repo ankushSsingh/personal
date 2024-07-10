@@ -1,5 +1,5 @@
 import React from "react";
-import content from "@/app/public/content";
+import content from "@/public/content";
 
 export default function Header() {
   return (

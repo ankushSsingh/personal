@@ -16,6 +16,7 @@ module.exports = {
       },
       animation: {
         blink: 'blink 1s step-start infinite',
+
       },
     },
   },
