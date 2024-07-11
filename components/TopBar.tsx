@@ -19,10 +19,6 @@ export default function TopBar() {
                     <p> books </p>
                 </div>
             </Link>
-            
-            <div>
-                <p> games </p>
-            </div>
             <Link href="/me/life/">
             <div>
                 <p> life </p>
@@ -30,7 +26,7 @@ export default function TopBar() {
             </Link>
             <Link href="/me/contact/">
             <div>
-                <p> get in touch </p>
+                <p> contact </p>
             </div>
             </Link>
         </div>

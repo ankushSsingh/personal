@@ -5,11 +5,11 @@ import content from '../../public/content';
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
-export async function HandleMessage(prevstate : State , formData: FormData){
+export async function HandleMessage(formData: { name : string , email : string, message : string }){
 
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const name = formData.name;
+    const email = formData.email;
+    const message = formData.message;
 
     let transporter = nodemailer.createTransport({
         service: 'gmail', // e.g., 'gmail'
@@ -42,7 +42,7 @@ export async function HandleMessage(prevstate : State , formData: FormData){
       });
 
       revalidatePath('/me/contact/');
-      redirect('/me/messagesent/');
+      redirect('/me/contact/');
 
       
 }
