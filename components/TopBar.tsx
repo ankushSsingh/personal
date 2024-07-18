@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function TopBar() {
   return (
-    <div className="mx-4 fixed top-0 left-0 right-full w-full bg-gray-950 text-white p-2 mt-4 ">
+    <div className="mx-4 fixed top-0 left-0 right-full w-full bg-gray-950 text-white p-2 mt-4 z-10 ">
         <div className="flex flex-col justify-center space-y-4 md:flex-row md:space-x-28" >
             <div>
                 <p>{content.HeaderText}</p>

@@ -37,7 +37,10 @@ export default function Page() {
         message: ''
         });
         setMessageSent(true);
-    };
+        setTimeout(() => {
+            setMessageSent(false);
+          }, 5000); // Reset state after 10 seconds
+        };
   return (
     <main className="flex flex-wrap mt-16 py-32 justify-center  ">
         
@@ -62,7 +65,9 @@ export default function Page() {
                                name="name"
                                className="font-light border-2 w-2/3 px-1 border-gray-400 focus:outline-none focus:ring-2 focus:border-none ring-black"
                                onChange={handleChange}
-                               value={formData.name}/>
+                               value={formData.name}
+                               required
+                                />
                     </div>
                     <div className="p-5 flex flex-row spacing-x-4" >
                         <p className="font-mono w-1/3">Email :</p>
@@ -70,7 +75,8 @@ export default function Page() {
                                name="email"
                                className="font-light border-2 w-2/3 px-1 border-gray-400 focus:outline-none focus:ring-2 focus:border-none ring-black"
                                onChange={handleChange} 
-                               value={formData.email}/>
+                               value={formData.email}
+                               required />
                     </div>
 
                     <div className="p-5 flex flex-row spacing-x-4" >
@@ -80,7 +86,8 @@ export default function Page() {
                                className="font-light border-2 w-2/3 px-1 h-40 border-gray-400 focus:outline-none focus:ring-2  focus:border-none ring-black break-words "
                                placeholder="Write your message here."
                                onChange={handleChange}
-                               value={formData.message}/>
+                               value={formData.message}
+                               required />
                     </div>
                     <div className="flex flex-row justify-center p-2">
                         <button
