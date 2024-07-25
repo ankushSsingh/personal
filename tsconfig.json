@@ -30,7 +30,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/data/db.js"  ],
   "exclude": [
     "node_modules"
   ]

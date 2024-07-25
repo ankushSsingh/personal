@@ -24,6 +24,11 @@ export default function TopBar() {
                 <p> life </p>
             </div>
             </Link>
+            <Link href="/me/thoughts/">
+            <div>
+                <p> thoughts </p>
+            </div>
+            </Link>
             <Link href="/me/contact/">
             <div>
                 <p> contact </p>
