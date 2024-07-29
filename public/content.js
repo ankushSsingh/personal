@@ -6,7 +6,7 @@ HeaderText : "Hello!",
 Books : " I am currently not reading.",
 Life: "This is the life page showing pictures from my life.",
 changing_text : ['l','li','liv','live','d','dr','dre','drea','dream','s','se','ser','serv','serve','e','en','enj','enjo','enjoy'],
-Thoughts: "Some thoughts that you have posted before.",
+Thoughts: "thoughts that you have posted before.",
 Loading:"Loading..."
 }
 

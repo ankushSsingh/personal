@@ -92,7 +92,7 @@ export default function Page() {
                     <div className="flex flex-row justify-center p-2">
                         <button
                             type="submit"
-                            className="bg-black  mt-3 p-2 text-gray-50 text-lg font-bold rounded-sm "
+                            className="bg-black  mt-3 p-2 text-gray-50 text-lg font-bold rounded-sm hover:scale-110"
                             >
                         Submit
                         </button>    

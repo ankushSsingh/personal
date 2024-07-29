@@ -45,7 +45,6 @@ export async function readthoughts(){
     let results = await collec.find({})
         .toArray();
 
-    
     return results;
 }
 
@@ -67,7 +66,7 @@ export async function deletethought(id : string){
     const query = { _id: newid };
 
     let result = await collec.deleteOne(query);
-    
+
     revalidatePath('/me/thoughts');
     redirect('/me/thoughts');
 }
