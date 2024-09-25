@@ -4,7 +4,8 @@ import { revalidatePath } from "next/cache";
 import { redirect } from 'next/navigation';
 require('dotenv').config();
 import { ObjectId } from "mongodb";
-
+import axios from 'axios';
+import qs from 'qs';
 
 export async function postthought(formData: { post : string}){
 
@@ -70,3 +71,39 @@ export async function deletethought(id : string){
     revalidatePath('/me/thoughts');
     redirect('/me/thoughts');
 }
+
+export async function getRedditAccessToken() {
+
+    const CLIENT_ID = 'p-jcoLKBynTLew';
+    const CLIENT_SECRET = 'gko_LXELoV07ZBNUXrvWZfzE3aI';
+    const USERNAME = 'reddit_bot';
+    const PASSWORD = 'snoo';
+
+    try {
+      // Create the Basic Auth header
+      const auth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
+  
+      // Prepare the request payload
+      const postData = {
+        grant_type: 'password',
+        username: USERNAME,
+        password: PASSWORD,
+      };
+  
+      // Set the headers
+      const headers = {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': `Basic ${auth}`,
+        'User-Agent': 'ChangeMeClient/0.1 by YourUsername',
+      };
+  
+      // Make the POST request
+      const response = await axios.post('https://www.reddit.com/api/v1/access_token', qs.stringify(postData), { headers });
+  
+      // Output the response data
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching access token:', error);
+    }
+  }
+  

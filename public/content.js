@@ -7,7 +7,8 @@ Books : " I am currently not reading.",
 Life: "This is the life page showing pictures from my life.",
 changing_text : ['l','li','liv','live','d','dr','dre','drea','dream','s','se','ser','serv','serve','e','en','enj','enjo','enjoy'],
 Thoughts: "thoughts that you have posted before.",
-Loading:"Loading..."
+Loading:"Loading...",
+Trending: "Look at the subreddits trending now on Reddit!"
 }
 
 export default content;
